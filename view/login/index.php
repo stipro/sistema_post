@@ -1,5 +1,5 @@
 <?php
-    session_name('AMOSIS');
+    session_id('AMOSIS');
     session_start();
     if(isset($_SESSION["usuario"])){
         $usuario = $_SESSION["usuario"];

@@ -25,7 +25,7 @@ class login extends Controller
                 $cn = mainModel::conectar();
                 $buscar = $cn->query("SELECT u.ID_USUARIO,p.NOMBRE,u.ID_PERSONA,u.PRIVILEGIO,p.PERFIL,u.DASHBOARD,u.ALMACEN,u.COMPRAS,u.VENTAS,u.TURNOS,u.COTIZACION,u.INVENTARIO,u.ADMIN,u.PARAMETROS,u.BACKUP FROM usuario as u INNER JOIN persona as p on u.ID_PERSONA = p.ID_PERSONA WHERE u.USUARIO = '$usuario' AND u.PASS = '$pass' AND u.ESTADO=1");
                 if ($buscar->rowCount() > 0) {
-                    session_name('AMOSIS');
+                    session_id('AMOSIS');
                     session_start();
                     $bitacora = $cn->query("SELECT * FROM bitacora");
                     $bitacora = $bitacora->rowCount();
@@ -79,7 +79,7 @@ class login extends Controller
     function cerrar_sesion()
     {
         $cn = mainModel::conectar();
-        session_name('AMOSIS');
+        session_id('AMOSIS');
         session_start();
         $bitacora = $_SESSION['sesion'];
         date_default_timezone_set(ZONE);

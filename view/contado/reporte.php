@@ -1,5 +1,5 @@
 <?php
-    session_name('AMOSIS');
+    session_id('AMOSIS');
     date_default_timezone_set(ZONE);
     session_start();
     if(!isset($_SESSION["usuario"])){

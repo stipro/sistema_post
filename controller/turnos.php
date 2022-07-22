@@ -36,7 +36,7 @@
             }
         }
         function abrirturno(){
-            session_name('AMOSIS');
+            session_id('AMOSIS');
             session_start();
             $_SESSION["turno"] = 1;
             echo  $_SESSION["turno"];
@@ -50,7 +50,7 @@
                 $cn = mainModel::conectar();
                 $insertar = $cn->query("UPDATE `turno` SET `FECHA_F`= '$fecha',`FHORA2`= '$fechahora',`ESTADO`= 0  WHERE `ID_TURNO`= '$turno' ");
                 if($insertar->rowCount()>0){
-                    session_name('AMOSIS');
+                    session_id('AMOSIS');
                     session_start();
                     $_SESSION["turno"] = 0;
                     $turno = $_SESSION["turno"];
