@@ -1,6 +1,6 @@
 <?php
     const SERVER = 'localhost';
-    const DB = 'amosis';
+    const DB = 'corpm4en_amosis';
     const USER = 'corpm4en';
     const PASS = '#$ALDgfs165'; 
     const SGDB = "mysql:host=".SERVER.";dbname=".DB;
