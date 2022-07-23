@@ -1,6 +1,7 @@
 <?php
     session_id('AMOSIS');
     session_start();
+    echo $_SESSION["usuario"];
     /* if(isset($_SESSION["usuario"])){
         $usuario = $_SESSION["usuario"];
         if($usuario != ""){
