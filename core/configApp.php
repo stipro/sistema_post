@@ -1,5 +1,5 @@
 <?php
-    const SERVER = 'yasur.soy.pe';
+    const SERVER = 'localhost';
     const DB = 'corpm4en_amosis';
     const USER = 'corpm4en';
     const PASS = '#$ALDgfs165'; 

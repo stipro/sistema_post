@@ -7,7 +7,7 @@
             echo '<script> window.location.href="'.SERVERURL.'dashboard/" ;</script>';
         }
     }
-
+    session_write_close();
 ?>
 <!DOCTYPE html>
 <html lang="es">

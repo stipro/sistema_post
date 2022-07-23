@@ -85,6 +85,7 @@
                             $_SESSION["NOMBRESIDE"] = $nombre;
                             $nombre = $_SESSION["NOMBRESIDE"];
                             echo 1;
+                            session_write_close();
                         }else{
                             echo 0;
                         }
@@ -99,6 +100,7 @@
                         $_SESSION["NOMBRESIDE"] = $nombre;
                         $nombre = $_SESSION["NOMBRESIDE"];
                         echo 1;
+                        session_write_close();
                     }else{
                         echo 0;
                     }

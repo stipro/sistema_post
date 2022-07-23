@@ -64,6 +64,7 @@ class login extends Controller
                     if ($addBitacora->rowCount() > 0) {
                         echo '<script> window.location.href="' . SERVERURL . 'dashboard/" ;</script>';
                     }
+                    session_write_close();
                 } else {
                     echo "<script>
                             showNotification('bottom','center','Usuario y/o Contraseña Incorrecta o cuenta inactiva','danger');
@@ -88,7 +89,8 @@ class login extends Controller
         if ($updateBitacora->rowCount() > 0) {
             echo '<script> window.location.href="' . SERVERURL . 'login/" ;</script>';
         }
-        session_destroy();
+        /* session_destroy(); */
+        session_write_close();
     }
     function registrarse()
     {
