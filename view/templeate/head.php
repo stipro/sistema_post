@@ -1,6 +1,6 @@
 <?php
     session_id('AMOSIS');
-    /* session_start(); */
+    session_start();
     if(!isset($_SESSION["usuario"])){
       echo '<script> window.location.href="'.SERVERURL.'login/" ;</script>';
     }
