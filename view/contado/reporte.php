@@ -1,11 +1,11 @@
 <?php
-    session_id('AMOSIS');
+    //session_id('AMOSIS');
     date_default_timezone_set(ZONE);
     session_start();
     if(!isset($_SESSION["usuario"])){
       echo '<script> window.location.href="'.SERVERURL.'login/" ;</script>';
     }
-    session_write_close();
+    //session_write_close();
 ?>
 <?php
   if(!$_SESSION["ventas"]){

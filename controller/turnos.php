@@ -36,11 +36,11 @@
             }
         }
         function abrirturno(){
-            session_id('AMOSIS');
+            //session_id('AMOSIS');
             session_start();
             $_SESSION["turno"] = 1;
             echo  $_SESSION["turno"];
-            session_write_close();
+            //session_write_close();
         }
         function cerrarturno(){
             if(isset($_POST["turno"])){
@@ -60,7 +60,7 @@
                     }else{
                         echo 2;
                     }
-                    session_write_close();
+                    //session_write_close();
                 }else{
                     echo 0;
                 }

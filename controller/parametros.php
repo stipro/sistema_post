@@ -78,14 +78,14 @@
                     if(move_uploaded_file($tmp,"archives/assets/$name")){
                         $datos = $cn->query("UPDATE `paramatros` SET `LOGOSIDE`= '$name',`NOMBRESIDE`= '$nombre'  WHERE ID_PARAMETRO = 1");
                         if($datos->rowCount()>0){
-                            session_id('AMOSIS');
+                            //session_id('AMOSIS');
                             session_start();
                             $_SESSION["LOGOSIDE"] = $name;
                             $name = $_SESSION["LOGOSIDE"];
                             $_SESSION["NOMBRESIDE"] = $nombre;
                             $nombre = $_SESSION["NOMBRESIDE"];
                             echo 1;
-                            session_write_close();
+                            //session_write_close();
                         }else{
                             echo 0;
                         }
@@ -100,7 +100,7 @@
                         $_SESSION["NOMBRESIDE"] = $nombre;
                         $nombre = $_SESSION["NOMBRESIDE"];
                         echo 1;
-                        session_write_close();
+                        //session_write_close();
                     }else{
                         echo 0;
                     }

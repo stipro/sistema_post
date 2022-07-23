@@ -1,14 +1,14 @@
 <?php
-    session_id('AMOSIS');
+    //session_id('AMOSIS');
     session_start();
-    echo $_SESSION["usuario"];
-    /* if(isset($_SESSION["usuario"])){
+    var_dump($_SESSION);
+    if(isset($_SESSION["usuario"])){
         $usuario = $_SESSION["usuario"];
         if($usuario != ""){
             echo '<script> window.location.href="'.SERVERURL.'dashboard/" ;</script>';
         }
-    } */
-    session_write_close();
+    }
+    ////session_write_close();
 ?>
 <!DOCTYPE html>
 <html lang="es">
