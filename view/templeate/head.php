@@ -1,10 +1,11 @@
 <?php
     session_id('AMOSIS');
     session_start();
+    session_write_close();
     if(!isset($_SESSION["usuario"])){
       echo '<script> window.location.href="'.SERVERURL.'login/" ;</script>';
     }
-    session_write_close();
+    
 ?>
 <!DOCTYPE html>
 <html lang="es">
