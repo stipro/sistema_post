@@ -2,9 +2,9 @@
     session_id('AMOSIS');
     session_start();
     session_write_close();
-    if(!isset($_SESSION["usuario"])){
+    /* if(!isset($_SESSION["usuario"])){
       echo '<script> window.location.href="'.SERVERURL.'login/" ;</script>';
-    }
+    } */
     
 ?>
 <!DOCTYPE html>

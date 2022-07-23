@@ -1,12 +1,12 @@
 <?php
     session_id('AMOSIS');
     session_start();
-    if(isset($_SESSION["usuario"])){
+    /* if(isset($_SESSION["usuario"])){
         $usuario = $_SESSION["usuario"];
         if($usuario != ""){
             echo '<script> window.location.href="'.SERVERURL.'dashboard/" ;</script>';
         }
-    }
+    } */
     session_write_close();
 ?>
 <!DOCTYPE html>
